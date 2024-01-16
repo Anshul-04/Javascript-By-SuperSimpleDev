@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAuto boxing</title>
+  </head>
+  <body>
+    <script>
+      console.log('hello'.length);
+      console.log('apple'.toUpperCase);
+ 
+      // # OBJECTS ARE REFERENCES
+
+      const object1 = {
+        message: 'hello',
+        price: 799
+      };
+
+      const object2 = object1; // it don't copy entire object1 but copy the refrence.
+      // both obj 1 and 2 pointing to same address in the memeory where object1 is stored
+
+      object1.message = 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+      // we can not compare objects directly
+      const object3 = {
+        message: 'hello',
+        price: 799
+      };
+
+      console.log(object1 === object3); //false
+      // because === compares refrences and not values so obj1 and obj3 are different refences 
+      // hences it is false
+
+      // # Some shortcuts 
+
+      const object4 = {
+        message: 'hello',        
+      };
+      // if variable name and object property name is same then we can use 'destructuring' 
+      // const message = object4.message;
+      const{message} = object4;
+      console.log(message);
+
+      // we can use Destructuring property to take out multiple variables
+      const object5 = {
+        message1: 'hello', 
+        price : 399,       
+      };
+      const{message1,price} = object5;
+      console.log(message1);
+      console.log(price);
+
+      // Shorthand property
+
+    </script>
+  </body>
+</html>

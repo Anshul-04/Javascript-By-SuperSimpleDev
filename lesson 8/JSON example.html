@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    console.log("keolo");
+
+    const person = {
+      name : 'Alex',
+      age : 25,
+      address : 'Mumbai'
+    };
+
+    console.log(person);
+    
+    // converting object into JSON 
+    // converting objects into JSON .It is done using stringify() method
+    const jsonObj = JSON.stringify(person);
+    console.log(jsonObj);
+    console.log(typeof jsonObj);  // String
+
+    // COnverting JSON into object , It is done using parse() method
+    console.log(JSON.parse(jsonObj));
+    console.log(typeof JSON.parse(jsonObj));  // Object
+
+
+  </script>
+</body>
+</html>

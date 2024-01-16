@@ -41,6 +41,7 @@
           else if(computerMove === 'Scissor'){
             result = 'Tie'
           }
+
         }
         else if(playerMove === 'Paper'){
           if(computerMove === 'Rock'){
@@ -51,6 +52,7 @@
           else if(computerMove === 'Scissor'){
             result = 'You lose!'
           }
+
         }
         else if(playerMove === 'Rock'){
           if(computerMove === 'Rock'){
@@ -61,7 +63,9 @@
           else if(computerMove === 'Scissor'){
             result = 'You won!'
           }
+
         }        
+
         alert(`You picked ${playerMove}.Computer picked ${computerMove}. ${result}`);  
       }
 
@@ -79,6 +83,7 @@
           computerMove ='Scissor';
         }
         return computerMove;
+        
       }
 
     </script>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+  </head>  
+  <body>
+    
+    <script>
+      //Objects
+
+      /*
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(product);
+      console.log(product.name);  // accessing objects using dot notation
+      console.log(product.price);
+
+      product.name = 'cotton socks';  // updating new property  using dot notation
+      console.log(product);
+
+      product.quantity = 6 ;  // updating new property  using dot notation
+      console.log(product.quantity);
+
+      product.newProperty = true; 
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+      */
+
+      // Bracket notation
+
+      const product2 = {
+        name : 'Book',
+        ['delivery-time'] : '1 Day', // adding new property using bracket notation
+        color : 'Red',
+      };
+
+      console.log(product2);
+      console.log(product2['name']);  // accessing property value using bracket notation
+      console.log(product2['delivery-time']);
+      
+
+      // Inside objects we can save anytype of values
+
+      const product3 = {
+        name : 'Fruits',
+        ['delivery-time'] : '1 Day',  // adding new property using bracket notation
+
+        // we can store another objects
+        rating : {
+            stars : 4.2,
+            count : 34
+        },
+
+        // we can store functions
+        fun : function function1(){  // this is called method because it's inside object
+            console.log('Function inside Object');
+        }
+
+      };
+
+      console.log(product3.rating.stars);     // access using dot notation
+      console.log(product3.rating['count']);    // access using bracker notation
+      product2.fun();
+
+      // null vs undefined 
+
+      // null = intentionally want something to be empty 
+
+      function func(parameter = 'default') {
+         console.log (parameter); 
+      }
+
+      func();   // 'default' 
+      func(undefined);     //  => 'default' 
+      func(null);         //  => null
+
+    </script>
+  </body>
+</html>
