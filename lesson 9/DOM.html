@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom </title>
+  <body>
+
+    <button>Hello</button>
+    <button class="js-button">Second button</button>
+
+ 
+
+    <script>
+      // document.querySelector() --> let us get any element from page and put it inside javascript
+      console.log(document.querySelector('button'));         
+      
+      console.log(document.querySelector('button').innerHTML);  // every html element has property called innerHTML which let us control the element
+      
+      document.querySelector('button').innerHTML = 'Changed';
+    
+      const buttonElement = document.querySelector('.js-button');  // this will look for class starting with js-button
+      console.log(buttonElement);
+      
+
+      // document object - with this we can change html with help of javascript.It  has properties and methods
+
+      // document.body.innerHTML = 'Hello world';
+      // document.title = 'Welcome aboard'
+      
+      /*
+      console.log(document.title);
+      document.title = 'Changed';
+
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      //this property will change all the html element inside the body
+      document.body.innerHTML = 'I am changed';
+      
+      //we can also write HTML inside DOM 
+      document.body.innerHTML = '<button>This will replace all html elements </button>';
+      */
+
+      
+    </script>
+  </body>
+</html>
