@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Using CSS</title>
+    <link rel="stylesheet" href="/lesson 10 HTML-CSS-JS-together/styles.css">
+    
+   
+  </head>  
+  <body>
+
+    <p class="title">Rock Paper Scissors </p>
+
+    <button class="rock-button move-button"  onclick=" playGame('Rock'); ">
+      <img class="move-icon" src="./images/Rock-emoji.png" alt="rock-emoji">
+    </button>
+
+    <button class="paper-button move-button"  onclick="playGame('Paper');">
+      <img class="move-icon" src="./images/Paper-emoji.png" alt="paper-emoji">
+    </button>
+
+    <button class="scissor-button move-button"   onclick="playGame('Scissor');">
+      <img class="move-icon" src="./images/Scissor-emoji.png" alt="scissors-emoji">
+    </button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves ">
+    
+    </p>
+    <p class="js-score score"></p>
+
+    <button onclick="
+      score.wins =0;
+      score.losses =0;
+      score.ties =0 ;
+      // when we reset score it will remove the old score from local storage
+      localStorage.removeItem('Score');
+      updateScoreElemet();
+    " class="reset-score-button">Reset Score</button>
+    
+    
+
+
+    <script src="/lesson 10 HTML-CSS-JS-together/script.js"></script>  
+
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom projects</title>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .subscribe-button{
+        background-color: black;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 32px;
+      }
+
+      .is-subscribed{
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+
+      .cost-input{
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .calculate-button{
+        font-size: 15px;
+        padding: 12px 15px;
+        color: white;
+        background-color: green;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p>YouTube Subscribe Button</p>
+
+    <button class="js-subscribe-button subscribe-button" onclick=" subscribe() ">
+      Subscribe
+    </button>
+
+    <p class="shipping -calculatpr-title">Amazon Shipping Calculator</p>
+
+    <p>Orders under $40 = +$10 shipping</p>
+
+    <p>Orders over $40 = FREE shipping</p>
+    
+    <input class="js-cost-input cost-input"  placeholder="Cost of Order" onkeydown=" handleCostKeyDown(event)"/>
+    
+    <button class="calculate-button" onclick="calculateTotal() ">
+      Calculate
+    </button>
+
+    <p class="js-total-cost" ></p>
+
+
+
+
+
+    <script>
+
+      function handleCostKeyDown(event){
+        // event.key will tell us which key we have pressed
+        if(event.key === 'Enter'){
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal(){
+
+        const inputElement = document.querySelector('.js-cost-input');
+
+        let cost = Number(inputElement.value) ; // value --> gets value of text inside from elements. it will be string
+        // Number() convert string into number
+      
+        console.log(typeof cost);
+
+
+        if(cost < 40 ){
+          cost = cost + 10 ;
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+      }
+
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button');
+        
+        //using innerText to avoid space and directly accessing text inside elements 
+        if(buttonElement.innerText === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+          // we can also add classes with help of JS
+          buttonElement.classList.add('is-subscribed'); // this will add a class after clciking the btn with help of js
+        }
+        else{
+          buttonElement.innerHTML = 'Subscribe';
+          buttonElement.classList.remove('is-subscribed'); // this will remove the class
+        }
+      }
+    </script>
+    
+  </body>
+</html>
