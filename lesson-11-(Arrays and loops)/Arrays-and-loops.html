@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and loops </title>
+</head>
+<body>
+  
+  <script>
+    const numbers = [1, 2, 3, 4, 5];
+    const booleans = [true, false, true, true];
+    const strings = ["happy", "go", "lucky"];
+
+
+    for(let i=0;i<numbers.length;i++){
+      if(numbers[i]>2){
+        console.log(numbers.splice(i,2));
+      }
+    }
+
+   /* We're using the splice function with two arguments.
+
+    The first argument is the starting index where we'd like to start the removal of elements.
+
+    The second argument is the number of elements we'd like to remove beginning at the starting index. 
+    */
+ </script>
+  
+</body>
+</html>
