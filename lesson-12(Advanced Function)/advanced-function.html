@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced function</title>
+</head>
+<body>
+  <script>
+    
+    function greeting(){
+      console.log('Hello');
+    }
+    greeting();
+
+    //Functions are values
+    // we can save function inside a function
+    const function1 = function greeting(){
+      console.log("hello2");
+    };
+
+    // a function without a name is called Anoymonus function
+    const function2 = function(){
+      console.log("hello2");
+    };
+
+    console.log(function1);
+    console.log(typeof function1);
+    // we can call function inside variable using variable name 
+    function1()
+
+    const object1 = {
+      num:2,
+      fun : function greeting(){
+        console.log("Hello3");
+      }
+    };
+    object1.fun();
+
+    // Passing a function into another function (Call back)
+    function run(param){
+      // here we can use the function below using param parameter name as just like we call any function
+      param();
+    }
+
+    run(function(){
+      console.log("hello4");
+    })
+
+    /* setTimeout allow us to run function in future
+    it take two parameter 
+    1st parameter take function which we want to run in future 
+    2nd parameter is how long to wait before running the function ,this is in miliseconds
+    */
+
+     // Asynchronous code 
+     /*
+    setTimeout(function(){
+      console.log('timeout');
+    },3000);
+
+   
+
+    console.log('next line'); //this will run(displayed) first then after 3 seconds the above 'timeout msg will be displayed in console'
+
+    setInterval(function() {
+      console.log('interval');
+    },3000);  //this will run this function and display 'interval 'every 3 seconds
+    */
+
+
+    // loop through the array use forEach()
+    const arr = [
+      'Apple',
+      'Mango',
+      'grapes'
+    ];
+    
+    arr.forEach(function(value,index){
+      console.log(index);
+      console.log(value);
+    });
+  
+    // # Arrow function (it is like regular function)
+
+    const regularFunction = function(){
+      console.log('Regular function');
+    }
+    regularFunction();
+
+    const arrowFunction = (param1,param2) => {
+      console.log('arrow function');
+      return 23;
+    }
+    arrowFunction();
+
+    // we it conatin one parameter then we can left () parenthesis
+    
+    const oneParam = param =>{
+      console.log(param*2);
+    }
+    oneParam(2);
+
+    // we can write it in one line
+
+    const oneline = ()=> 3+3 ;
+    console.log(oneline());
+
+    //so when passing a function into another function use arrow function syntax
+    const arr2 = [
+      'Apple',
+      'Mango',
+      'grapes'
+    ];
+    
+    arr2.forEach((value,index) => {
+      console.log('Using arrow function syntax');
+      console.log(index);
+      console.log(value);
+    });
+
+      // we can use it inside objects
+
+      const object2 = {
+        method : (){
+          // arrow function syntax 
+        },
+        method(){
+          // shorthand method syntax
+        }
+      }
+  
+  
+  
+  </script>
+</body>
+</html>

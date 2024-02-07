@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced function</title>
+</head>
+<body>
+
+  <button class="js-click-button" onclick="">Click</button>
+  <script>
+
+    /* addEventListener() example it does the same work as onclick()
+    it has 2 parameter 
+    1st param is for event . What type of event we want eg click
+    2nd param is for function which we want to run
+    */
+
+    const buttonElement = document.querySelector('.js-click-button');
+    
+    const eventListener = () => {     
+      console.log('Click1');
+    };
+    //add event listener
+    buttonElement.addEventListener('click',
+    eventListener);
+    //remove event listener
+    buttonElement.removeEventListener('click',
+    eventListener);
+
+    /*
+    we can also remove event listener 
+    it has 2 parameter 
+    1st param is for event . What type of event we want eg click
+    2nd param for function we want to remove*/
+
+    // it let us add multple Listner for one event
+
+    buttonElement.addEventListener('click',() => {      
+      console.log('Click2');
+    })
+    
+
+    // Array filter() and map()
+  
+    arr = [1,-2,0,-5,19,21];
+
+    console.log(arr.filter((value,index)=>{
+      if(value >= 0){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }));
+
+    /*
+    filter() is like forEach it return value 
+     1.It creates a new array
+     2.if value if true it add it in new arr
+     3.if value is false it don't add it in new arr
+     */
+
+      /*
+    mapr() is like forEach and filter() it return value 
+     1.It creates a new array
+     2.whatever we return it add it to new arr
+     */
+
+    console.log(arr.map((value,index)=>{
+      return value *2 ;
+     }));
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </script>
+</body>
+</html>

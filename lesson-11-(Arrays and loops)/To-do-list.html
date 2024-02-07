@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./todo-List.css">
   <title>ToDo list</title>
 </head>
 <body>
 
-  <p>To do list</p>
-  <input class="js-name-input" type="text" placeholder="Todo name">
-  <button onclick="addTodo()">Add</button>
+  <p>To do List </p>
+  <div class="todo-input-grid">
+    <input class="js-name-input name-input" type="text" placeholder="Todo name">
+    <input class="js-dueDate due-date-input" type="date">
+    <button class="add-todo-button" onclick="addTodo()">Add</button>  
+  </div>
 
+  <div class="js-todo-list todo-grid">text</div>
 
   <script src="/lesson-11-(Arrays and loops)/todo-list.js">
 
